@@ -1,0 +1,365 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20200227154113
+Nombre de usuario: PC\Alejandro Narvaez
+Usuario RunAs: PC\Alejandro Narvaez
+Nombre de la configuración: 
+Máquina: PC (Microsoft Windows NT 10.0.18362.0)
+Aplicación host: C:\WINDOWS\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Id. de proceso: 2512
+PSVersion: 5.1.18362.628
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.18362.628
+BuildVersion: 10.0.18362.628
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\Alejandro Narvaez\Documents\PowerShell_transcript.PC.nHw6bhl5.20200227154113.txt
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> new-Item archivo1.txt -Value "Holis2"
+
+
+    Directorio: C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----     27/02/2020  3:41 p. m.              6 archivo1.txt
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> new-Item archivo2.txt -Value "Holis"
+
+
+    Directorio: C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----     27/02/2020  3:41 p. m.              5 archivo2.txt
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> diff -Ref (Get-Content archivo1.txt) -diff (Get-Content archivo2.txt)
+
+InputObject SideIndicator
+----------- -------------
+Holis       =>
+Holis2      <=
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> get-service | export-csv servicios.csv | out-file
+>> ErrorTerminación(Out-File): "No se puede procesar el argumento porque el valor del argumento "path" es NULL. Cambie el valor del argumento "path" a un valor no nulo."
+out-file : No se puede procesar el argumento porque el valor del argumento "path" es NULL. Cambie el valor del 
+argumento "path" a un valor no nulo.
+En línea: 1 Carácter: 42
++ get-service | export-csv servicios.csv | out-file
++                                          ~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Out-File], PSArgumentNullException
+    + FullyQualifiedErrorId : ArgumentNull,Microsoft.PowerShell.Commands.OutFileCommand
+out-file : No se puede procesar el argumento porque el valor del argumento "path" es NULL. Cambie el
+valor del argumento "path" a un valor no nulo.
+En línea: 1 Carácter: 42
++ get-service | export-csv servicios.csv | out-file
++                                          ~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Out-File], PSArgumentNullException
+    + FullyQualifiedErrorId : ArgumentNull,Microsoft.PowerShell.Commands.OutFileCommand
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> get-process | export-csv procesos.csv -Delimiter ';'
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Export-Csv -Path archivo1.csv -NoClobber -Confirm
+Confirmar
+¿Está seguro de que desea realizar esta acción?
+Se está realizando la operación "Export-Csv" en el destino "archivo1.csv".
+&Sí  Sí a t&odo  &No  No a &todo  S&uspender
+S
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> (Get-Culture).TextInfo.ListSeparator
+;
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Export-Csv -UseCulture
+>> ErrorTerminación(Export-Csv): "Debe especificar uno de los parámetros -Path o -LiteralPath, pero no ambos."
+Export-Csv : Debe especificar uno de los parámetros -Path o -LiteralPath, pero no ambos.
+En línea: 1 Carácter: 1
++ Export-Csv -UseCulture
++ ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Export-Csv], InvalidOperationException
+    + FullyQualifiedErrorId : CannotSpecifyPathAndLiteralPath,Microsoft.PowerShell.Commands.ExportCsvCommand
+Export-Csv : Debe especificar uno de los parámetros -Path o -LiteralPath, pero no ambos.
+En línea: 1 Carácter: 1
++ Export-Csv -UseCulture
++ ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Export-Csv], InvalidOperationException
+    + FullyQualifiedErrorId : CannotSpecifyPathAndLiteralPath,Microsoft.PowerShell.Commands.ExportCsv
+   Command
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Export-Csv -Path archivo2.csv -UseCulture
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> (Get-Culture).TextInfo.ListSeparator
+;
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Export-Csv -Path archivo2.csv -UseCulture
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> (Get-Culture).TextInfo.ListSeparator
+;
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-Random
+2042409768
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-Date
+
+jueves, 27 de febrero de 2020 4:08:55 p. m.
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-Date|select-object -property DayOfWeek
+
+DayOfWeek
+---------
+ Thursday
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-HotFix
+
+Source        Description      HotFixID      InstalledBy          InstalledOn
+------        -----------      --------      -----------          -----------
+PC            Update           KB4534132     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+PC            Security Update  KB4515383     NT AUTHORITY\SYSTEM  17/09/2019 12:00:00 a. m.
+PC            Security Update  KB4516115     NT AUTHORITY\SYSTEM  21/09/2019 12:00:00 a. m.
+PC            Security Update  KB4521863     NT AUTHORITY\SYSTEM  10/10/2019 12:00:00 a. m.
+PC            Security Update  KB4524569     NT AUTHORITY\SYSTEM  13/11/2019 12:00:00 a. m.
+PC            Security Update  KB4528759     NT AUTHORITY\SYSTEM  16/01/2020 12:00:00 a. m.
+PC            Security Update  KB4537759     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+PC            Security Update  KB4538674     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+PC            Update           KB4532693     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-HotFix|Sort-Object -Property InstalledOn|Select-Object -Property InstalledOn,InstalledBy,HotFixID
+
+InstalledOn               InstalledBy         HotFixID
+-----------               -----------         --------
+17/09/2019 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4515383
+21/09/2019 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4516115
+10/10/2019 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4521863
+13/11/2019 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4524569
+16/01/2020 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4528759
+14/02/2020 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4534132
+14/02/2020 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4537759
+14/02/2020 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4538674
+14/02/2020 12:00:00 a. m. NT AUTHORITY\SYSTEM KB4532693
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-HotFix|Sort-Object -Property InstalledOn|Select-Object -Property InstalledBy,InstalledOn,HotFixID
+
+InstalledBy         InstalledOn               HotFixID
+-----------         -----------               --------
+NT AUTHORITY\SYSTEM 17/09/2019 12:00:00 a. m. KB4515383
+NT AUTHORITY\SYSTEM 21/09/2019 12:00:00 a. m. KB4516115
+NT AUTHORITY\SYSTEM 10/10/2019 12:00:00 a. m. KB4521863
+NT AUTHORITY\SYSTEM 13/11/2019 12:00:00 a. m. KB4524569
+NT AUTHORITY\SYSTEM 16/01/2020 12:00:00 a. m. KB4528759
+NT AUTHORITY\SYSTEM 14/02/2020 12:00:00 a. m. KB4534132
+NT AUTHORITY\SYSTEM 14/02/2020 12:00:00 a. m. KB4537759
+NT AUTHORITY\SYSTEM 14/02/2020 12:00:00 a. m. KB4538674
+NT AUTHORITY\SYSTEM 14/02/2020 12:00:00 a. m. KB4532693
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-Help Get-HotFix
+
+NOMBRE
+    Get-HotFix
+
+SINOPSIS
+    Gets the hotfixes that have been applied to the local and remote computers.
+
+
+SINTAXIS
+    Get-HotFix [-ComputerName <String[]>] [-Credential <PSCredential>] [-Description <String[]>]
+    [<CommonParameters>]
+
+    Get-HotFix [[-Id] <String[]>] [-ComputerName <String[]>] [-Credential <PSCredential>]
+    [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Get-Hotfix cmdlet gets hotfixes (also called updates) that have been installed on either the
+    local computer (or on specified remote computers) by Windows Update, Microsoft Update, or Windows
+    Server Update Services; the cmdlet also gets hotfixes or updates that have been installed
+    manually by users.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821586
+    Win32_QuickFixEngineering http://go.microsoft.com/fwlink/?LinkID=145071
+    Get-ComputerRestorePoint
+    Add-Content
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Get-HotFix -examples".
+    Para obtener más información, escriba: "get-help Get-HotFix -detailed".
+    Para obtener información técnica, escriba: "get-help Get-HotFix -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Get-HotFix -online"
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> help Get-HotFix
+
+NOMBRE
+    Get-HotFix
+
+SINOPSIS
+    Gets the hotfixes that have been applied to the local and remote computers.
+
+
+SINTAXIS
+    Get-HotFix [-ComputerName <String[]>] [-Credential <PSCredential>] [-Description <String[]>]
+    [<CommonParameters>]
+
+    Get-HotFix [[-Id] <String[]>] [-ComputerName <String[]>] [-Credential <PSCredential>]
+    [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Get-Hotfix cmdlet gets hotfixes (also called updates) that have been installed on either the
+    local computer (or on specified remote computers) by Windows Update, Microsoft Update, or Windows
+    Server Update Services; the cmdlet also gets hotfixes or updates that have been installed
+    manually by users.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821586
+    Win32_QuickFixEngineering http://go.microsoft.com/fwlink/?LinkID=145071
+    Get-ComputerRestorePoint
+    Add-Content
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Get-HotFix -examples".
+    Para obtener más información, escriba: "get-help Get-HotFix -detailed".
+    Para obtener información técnica, escriba: "get-help Get-HotFix -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Get-HotFix -online"
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> help Get-HotFix|Sort-Object 
+
+NOMBRE
+    Get-HotFix
+
+SINOPSIS
+    Gets the hotfixes that have been applied to the local and remote computers.
+
+
+SINTAXIS
+    Get-HotFix [-ComputerName <String[]>] [-Credential <PSCredential>] [-Description <String[]>]
+    [<CommonParameters>]
+
+    Get-HotFix [[-Id] <String[]>] [-ComputerName <String[]>] [-Credential <PSCredential>]
+    [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Get-Hotfix cmdlet gets hotfixes (also called updates) that have been installed on either the
+    local computer (or on specified remote computers) by Windows Update, Microsoft Update, or Windows
+    Server Update Services; the cmdlet also gets hotfixes or updates that have been installed
+    manually by users.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821586
+    Win32_QuickFixEngineering http://go.microsoft.com/fwlink/?LinkID=145071
+    Get-ComputerRestorePoint
+    Add-Content
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Get-HotFix -examples".
+    Para obtener más información, escriba: "get-help Get-HotFix -detailed".
+    Para obtener información técnica, escriba: "get-help Get-HotFix -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Get-HotFix -online"
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> help Sort-Object 
+
+NOMBRE
+    Sort-Object
+
+SINOPSIS
+    Sorts objects by property values.
+
+
+SINTAXIS
+    Sort-Object [[-Property] <Object[]>] [-CaseSensitive] [-Culture <String>] [-Descending]
+    [-InputObject <PSObject>] [-Unique] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Sort-Object cmdlet sorts objects in ascending or descending order based on the values of
+    properties of the object.
+
+    You can specify a single property or multiple properties, for a multi-key sort, and you can
+    select a case-sensitive or case-insensitive sort. You can also direct Sort-Object to display only
+    the objects with a unique value for a particular property.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821863
+    Compare-Object
+    Group-Object
+    Measure-Object
+    New-Object
+    Select-Object
+    Tee-Object
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Sort-Object -examples".
+    Para obtener más información, escriba: "get-help Sort-Object -detailed".
+    Para obtener información técnica, escriba: "get-help Sort-Object -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Sort-Object -online"
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> help -Property
+>> ErrorTerminación(help): "No se encuentra ningún parámetro que coincida con el nombre del parámetro 'Property'."
+help : No se encuentra ningún parámetro que coincida con el nombre del parámetro 'Property'.
+En línea: 1 Carácter: 6
++ help -Property
++      ~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [help], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,help
+help : No se encuentra ningún parámetro que coincida con el nombre del parámetro 'Property'.
+En línea: 1 Carácter: 6
++ help -Property
++      ~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [help], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,help
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> help Get-HotFix 
+
+NOMBRE
+    Get-HotFix
+
+SINOPSIS
+    Gets the hotfixes that have been applied to the local and remote computers.
+
+
+SINTAXIS
+    Get-HotFix [-ComputerName <String[]>] [-Credential <PSCredential>] [-Description <String[]>]
+    [<CommonParameters>]
+
+    Get-HotFix [[-Id] <String[]>] [-ComputerName <String[]>] [-Credential <PSCredential>]
+    [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Get-Hotfix cmdlet gets hotfixes (also called updates) that have been installed on either the
+    local computer (or on specified remote computers) by Windows Update, Microsoft Update, or Windows
+    Server Update Services; the cmdlet also gets hotfixes or updates that have been installed
+    manually by users.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821586
+    Win32_QuickFixEngineering http://go.microsoft.com/fwlink/?LinkID=145071
+    Get-ComputerRestorePoint
+    Add-Content
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Get-HotFix -examples".
+    Para obtener más información, escriba: "get-help Get-HotFix -detailed".
+    Para obtener información técnica, escriba: "get-help Get-HotFix -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Get-HotFix -online"
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-HotFix|Sort-Object -Property Description|Select-Object -Property Description,HotFixID,InstalledOn|out-file pagina.html
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-EventLog -LogName System -Newest 50|Sort-Object -Property Index|Sort-Object -Property Time|Select-Object -Property Index,Time,Source|Out-File entradas.txt
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20200227163725
+**********************
