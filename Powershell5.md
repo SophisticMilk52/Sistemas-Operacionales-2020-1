@@ -1,4 +1,5 @@
-
+#Taller 5
+#Ejercicios:
 1.	¿Cuál clase puede emplearse para consultar la dirección IP de un adaptador de red? ¿Posee dicha clase algún método para liberar un préstamo de dirección (lease) DHCP?
 
 Respuesta:
