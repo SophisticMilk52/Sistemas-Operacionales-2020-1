@@ -31,6 +31,6 @@ Respuesta:
 
 Respuesta:
 
-``Get-CimClass -Namespace root\SecurityCenter2 | where cimclassname -Like 'spyware'``
+``Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiSpywareProduct | where cimclassname -Like 'product'``
 
-``Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiVirusProduct ``
+``Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiVirusProduct | where cimclassname -Like 'spyware' ``
