@@ -5,7 +5,8 @@ Respuesta:
 ```get-process | ft name,id,responding -Autosize -Wrap```
 
 2. Muestre una tabla de procesos que incluya los nombres de los procesos y sus IDs. También incluya columnas para uso de memoria virtual y física; exprese dichos valores en megabytes (MB).
-```R//get-process | ft name,id,@{n='VM (MB)';e={$_.VM / 1MB -as [int]}}, @{n='PM (MB)';e={$_.PM / 1MB -as [int]}}]}}```
+Respuesta:
+```get-process | ft name,id,@{n='VM (MB)';e={$_.VM / 1MB -as [int]}}, @{n='PM (MB)';e={$_.PM / 1MB -as [int]}}]}}```
 
 3. Emplee Get-EventLog para mostrar una lista de los logs de eventos disponibles (revise la ayuda para encontrar el parámetro que le permitirá obtener dicha información). Formatee la salida como una tabla que incluya el nombre de despliegue del log y el período de retención. Los encabezados de columna deben ser NombreLog y Per-Retencion.
 Respuesta:
