@@ -4,7 +4,7 @@
 
 Respuesta:
 
-``Get-CimInstance -Class Win32_NetworkAdapterConfiguration | select IP, ServiceName``
+``Get-CimInstance -Class Win32_NetworkAdapterConfiguration``
 
 La clase  Win32_NetworkAdapterConfiguration no posee algún método que libere un préstamo en dirección DHCP.
 
