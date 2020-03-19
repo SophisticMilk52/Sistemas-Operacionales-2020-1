@@ -1,0 +1,2552 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20200319103208
+Nombre de usuario: PC\Alejandro Narvaez
+Usuario RunAs: PC\Alejandro Narvaez
+Nombre de la configuración: 
+Máquina: PC (Microsoft Windows NT 10.0.18362.0)
+Aplicación host: C:\WINDOWS\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Id. de proceso: 18620
+PSVersion: 5.1.18362.628
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.18362.628
+BuildVersion: 10.0.18362.628
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\Alejandro Narvaez\Documents\PowerShell_transcript.PC.8BCTgHwd.20200319103208.txt
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-CimInstance 
+Get-CimInstance : Clase no válida 
+En línea: 1 Carácter: 1
++ Get-CimInstance
++ ~~~~~~~~~~~~~~~
+    + CategoryInfo          : MetadataError: (root\cimv2:hi:String) [Get-CimInstance], CimException
+    + FullyQualifiedErrorId : HRESULT 0x80041010,Microsoft.Management.Infrastructure.CimCmdlets.GetCimInstanceCommand
+Get-CimInstance : Clase no válida
+En línea: 1 Carácter: 1
++ Get-CimInstance
++ ~~~~~~~~~~~~~~~
+    + CategoryInfo          : MetadataError: (root\cimv2:hi:String) [Get-CimInstance], CimException
+    + FullyQualifiedErrorId : HRESULT 0x80041010,Microsoft.Management.Infrastructure.CimCmdlets.GetCimInstanceCommand
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-CimInstance -Class Win32_NetworkAdapterConfiguration
+
+ServiceName      DHCPEnabled                                            Index                                                  Description
+-----------      -----------                                            -----                                                  -----------
+kdnic            True                                                   0                                                      Microsoft Kernel Debug Network Adapter
+Hamachi          True                                                   1                                                      LogMeIn Hamachi Virtual Ethernet Adapter
+VMnetAdapter     False                                                  2                                                      VMware Virtual Ethernet Adapter for VMnet1
+VMnetAdapter     False                                                  3                                                      VMware Virtual Ethernet Adapter for VMnet8
+athr             True                                                   4                                                      Qualcomm Atheros AR956x Wireless Network Adapter
+rt640x64         True                                                   5                                                      Realtek PCIe GbE Family Controller
+vwifimp          True                                                   6                                                      Microsoft Wi-Fi Direct Virtual Adapter
+vwifimp          True                                                   7                                                      Microsoft Wi-Fi Direct Virtual Adapter
+RasSstp          False                                                  8                                                      WAN Miniport (SSTP)
+RasAgileVpn      False                                                  9                                                      WAN Miniport (IKEv2)
+Rasl2tp          False                                                  10                                                     WAN Miniport (L2TP)
+PptpMiniport     False                                                  11                                                     WAN Miniport (PPTP)
+RasPppoe         False                                                  12                                                     WAN Miniport (PPPOE)
+NdisWan          False                                                  13                                                     WAN Miniport (IP)
+NdisWan          False                                                  14                                                     WAN Miniport (IPv6)
+NdisWan          False                                                  15                                                     WAN Miniport (Network Monitor)
+AsyncMac         False                                                  16                                                     RAS Async Adapter
+BthPan           True                                                   17                                                     Bluetooth Device (Personal Area Network)
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> help Get-CimInstance -Class Win32_NetworkAdapterConfiguration
+>> ErrorTerminación(help): "No se encuentra ningún parámetro que coincida con el nombre del parámetro 'Class'."
+help : No se encuentra ningún parámetro que coincida con el nombre del parámetro 'Class'.
+En línea: 1 Carácter: 22
++ help Get-CimInstance -Class Win32_NetworkAdapterConfiguration
++                      ~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [help], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,help
+help : No se encuentra ningún parámetro que coincida con el nombre del parámetro 'Class'.
+En línea: 1 Carácter: 22
++ help Get-CimInstance -Class Win32_NetworkAdapterConfiguration
++                      ~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [help], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,help
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-CimInstance -Class Win32_NetworkAdapterConfiguration | Select-Object IP
+
+
+Description             : Microsoft Kernel Debug Network Adapter
+Index                   : 0
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : LogMeIn Hamachi Virtual Ethernet Adapter
+Index                   : 1
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : VMware Virtual Ethernet Adapter for VMnet1
+Index                   : 2
+IPAddress               : {192.168.44.1, fe80::a835:4fd7:3a17:3fd8}
+IPConnectionMetric      : 35
+IPEnabled               : True
+IPFilterSecurityEnabled : False
+
+Description             : VMware Virtual Ethernet Adapter for VMnet8
+Index                   : 3
+IPAddress               : {192.168.81.1, fe80::3930:e239:33d1:b26}
+IPConnectionMetric      : 35
+IPEnabled               : True
+IPFilterSecurityEnabled : False
+
+Description             : Qualcomm Atheros AR956x Wireless Network Adapter
+Index                   : 4
+IPAddress               : {192.168.1.8, fe80::7d20:9379:903e:a36b}
+IPConnectionMetric      : 50
+IPEnabled               : True
+IPFilterSecurityEnabled : False
+
+Description             : Realtek PCIe GbE Family Controller
+Index                   : 5
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Microsoft Wi-Fi Direct Virtual Adapter
+Index                   : 6
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Microsoft Wi-Fi Direct Virtual Adapter
+Index                   : 7
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (SSTP)
+Index                   : 8
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (IKEv2)
+Index                   : 9
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (L2TP)
+Index                   : 10
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (PPTP)
+Index                   : 11
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (PPPOE)
+Index                   : 12
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (IP)
+Index                   : 13
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (IPv6)
+Index                   : 14
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : WAN Miniport (Network Monitor)
+Index                   : 15
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : RAS Async Adapter
+Index                   : 16
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+Description             : Bluetooth Device (Personal Area Network)
+Index                   : 17
+IPAddress               :
+IPConnectionMetric      :
+IPEnabled               : False
+IPFilterSecurityEnabled :
+
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> help  Get-Hotfix?
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> ErrorTerminación(): "Se ha detenido la canalización."
+>> ErrorTerminación(): "Se ha detenido la canalización."
+>> ErrorTerminación(): "Se ha detenido la canalización."
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> help Get-HotFix
+
+NOMBRE
+    Get-HotFix
+
+SINOPSIS
+    Gets the hotfixes that have been applied to the local and remote computers.
+
+
+SINTAXIS
+    Get-HotFix [-ComputerName <String[]>] [-Credential <PSCredential>] [-Description <String[]>] [<CommonParameters>]
+
+    Get-HotFix [[-Id] <String[]>] [-ComputerName <String[]>] [-Credential <PSCredential>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Get-Hotfix cmdlet gets hotfixes (also called updates) that have been installed on either the local computer (or on specified remote computers) by Windows Update, Microsoft
+    Update, or Windows Server Update Services; the cmdlet also gets hotfixes or updates that have been installed manually by users.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821586
+    Win32_QuickFixEngineering http://go.microsoft.com/fwlink/?LinkID=145071
+    Get-ComputerRestorePoint
+    Add-Content
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Get-HotFix -examples".
+    Para obtener más información, escriba: "get-help Get-HotFix -detailed".
+    Para obtener información técnica, escriba: "get-help Get-HotFix -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Get-HotFix -online"
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> help Get-WmiObject
+
+NOMBRE
+    Get-WmiObject
+
+SINOPSIS
+    Gets instances of WMI classes or information about the available classes.
+
+
+SINTAXIS
+    Get-WmiObject [-Class] <String> [[-Property] <String[]>] [-Amended] [-AsJob] [-Authentication {Default | None | Connect | Call | Packet | PacketIntegrity | PacketPrivacy |
+    Unchanged}] [-Authority <String>] [-ComputerName <String[]>] [-Credential <PSCredential>] [-DirectRead] [-EnableAllPrivileges] [-Filter <String>] [-Impersonation {Default |
+    Anonymous | Identify | Impersonate | Delegate}] [-Locale <String>] [-Namespace <String>] [-ThrottleLimit <Int32>] [<CommonParameters>]
+
+    Get-WmiObject [[-Class] <String>] [-Amended] [-AsJob] [-Authentication {Default | None | Connect | Call | Packet | PacketIntegrity | PacketPrivacy | Unchanged}] [-Authority
+    <String>] [-ComputerName <String[]>] [-Credential <PSCredential>] [-EnableAllPrivileges] [-Impersonation {Default | Anonymous | Identify | Impersonate | Delegate}] [-List]
+    [-Locale <String>] [-Namespace <String>] [-Recurse] [-ThrottleLimit <Int32>] [<CommonParameters>]
+
+    Get-WmiObject [-Amended] [-AsJob] [-Authentication {Default | None | Connect | Call | Packet | PacketIntegrity | PacketPrivacy | Unchanged}] [-Authority <String>]
+    [-ComputerName <String[]>] [-Credential <PSCredential>] [-DirectRead] [-EnableAllPrivileges] [-Impersonation {Default | Anonymous | Identify | Impersonate | Delegate}] [-Locale
+    <String>] [-Namespace <String>] -Query <String> [-ThrottleLimit <Int32>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    Starting in Windows PowerShell 3.0, this cmdlet has been superseded by Get-CimInstancehttp://technet.microsoft.com/library/jj590758(v=wps.630).aspx.
+
+    The Get-WmiObject cmdlet gets instances of Windows Management Instrumentation (WMI) classes or information about the available WMI classes. To specify a remote computer, use
+    the ComputerName parameter. If the List parameter is specified, the cmdlet gets information about the WMI classes that are available in a specified namespace. If the Query
+    parameter is specified, the cmdlet runs a WMI query language (WQL) statement.
+
+    This cmdlet does not use Windows PowerShell remoting to perform remote operations. You can use the ComputerName parameter of the Get-WmiObject cmdlet even if your computer does
+    not meet the requirements for Windows PowerShellremoting or is not configured for remoting in Windows PowerShell.
+
+    Beginning in Windows PowerShell 3.0, the __Server property of the object that Get-WmiObject returns has a PSComputerName alias. This makes it easier to include the source
+    computer name in output and reports.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821595
+    Get-WSManInstance
+    Invoke-WSManAction
+    New-WSManInstance
+    Remove-WSManInstance
+    Invoke-WmiMethod
+    Remove-WmiObject
+    Set-WmiInstance
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Get-WmiObject -examples".
+    Para obtener más información, escriba: "get-help Get-WmiObject -detailed".
+    Para obtener información técnica, escriba: "get-help Get-WmiObject -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Get-WmiObject -online"
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-WmiObject win32_QuickFixEngineering
+
+Source        Description      HotFixID      InstalledBy          InstalledOn
+------        -----------      --------      -----------          -----------
+PC            Update           KB4534132     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+PC            Security Update  KB4515383     NT AUTHORITY\SYSTEM  17/09/2019 12:00:00 a. m.
+PC            Security Update  KB4516115     NT AUTHORITY\SYSTEM  21/09/2019 12:00:00 a. m.
+PC            Security Update  KB4521863     NT AUTHORITY\SYSTEM  10/10/2019 12:00:00 a. m.
+PC            Security Update  KB4524569     NT AUTHORITY\SYSTEM  13/11/2019 12:00:00 a. m.
+PC            Security Update  KB4528759     NT AUTHORITY\SYSTEM  16/01/2020 12:00:00 a. m.
+PC            Security Update  KB4537759     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+PC            Security Update  KB4538674     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+PC            Security Update  KB4541338     NT AUTHORITY\SYSTEM  13/03/2020 12:00:00 a. m.
+PC            Update           KB4551762     NT AUTHORITY\SYSTEM  13/03/2020 12:00:00 a. m.
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> help Get-WmiObject win32_service 
+>> ErrorTerminación(help): "No se encuentra ningún parámetro de posición que acepte el argumento 'win32_service'."
+help : No se encuentra ningún parámetro de posición que acepte el argumento 'win32_service'.
+En línea: 1 Carácter: 1
++ help Get-WmiObject win32_service
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [help], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,help
+help : No se encuentra ningún parámetro de posición que acepte el argumento 'win32_service'.
+En línea: 1 Carácter: 1
++ help Get-WmiObject win32_service
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [help], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,help
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> help Get-WmiObject
+
+NOMBRE
+    Get-WmiObject
+
+SINOPSIS
+    Gets instances of WMI classes or information about the available classes.
+
+
+SINTAXIS
+    Get-WmiObject [-Class] <String> [[-Property] <String[]>] [-Amended] [-AsJob] [-Authentication {Default | None | Connect | Call | Packet | PacketIntegrity | PacketPrivacy |
+    Unchanged}] [-Authority <String>] [-ComputerName <String[]>] [-Credential <PSCredential>] [-DirectRead] [-EnableAllPrivileges] [-Filter <String>] [-Impersonation {Default |
+    Anonymous | Identify | Impersonate | Delegate}] [-Locale <String>] [-Namespace <String>] [-ThrottleLimit <Int32>] [<CommonParameters>]
+
+    Get-WmiObject [[-Class] <String>] [-Amended] [-AsJob] [-Authentication {Default | None | Connect | Call | Packet | PacketIntegrity | PacketPrivacy | Unchanged}] [-Authority
+    <String>] [-ComputerName <String[]>] [-Credential <PSCredential>] [-EnableAllPrivileges] [-Impersonation {Default | Anonymous | Identify | Impersonate | Delegate}] [-List]
+    [-Locale <String>] [-Namespace <String>] [-Recurse] [-ThrottleLimit <Int32>] [<CommonParameters>]
+
+    Get-WmiObject [-Amended] [-AsJob] [-Authentication {Default | None | Connect | Call | Packet | PacketIntegrity | PacketPrivacy | Unchanged}] [-Authority <String>]
+    [-ComputerName <String[]>] [-Credential <PSCredential>] [-DirectRead] [-EnableAllPrivileges] [-Impersonation {Default | Anonymous | Identify | Impersonate | Delegate}] [-Locale
+    <String>] [-Namespace <String>] -Query <String> [-ThrottleLimit <Int32>] [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    Starting in Windows PowerShell 3.0, this cmdlet has been superseded by Get-CimInstancehttp://technet.microsoft.com/library/jj590758(v=wps.630).aspx.
+
+    The Get-WmiObject cmdlet gets instances of Windows Management Instrumentation (WMI) classes or information about the available WMI classes. To specify a remote computer, use
+    the ComputerName parameter. If the List parameter is specified, the cmdlet gets information about the WMI classes that are available in a specified namespace. If the Query
+    parameter is specified, the cmdlet runs a WMI query language (WQL) statement.
+
+    This cmdlet does not use Windows PowerShell remoting to perform remote operations. You can use the ComputerName parameter of the Get-WmiObject cmdlet even if your computer does
+    not meet the requirements for Windows PowerShellremoting or is not configured for remoting in Windows PowerShell.
+
+    Beginning in Windows PowerShell 3.0, the __Server property of the object that Get-WmiObject returns has a PSComputerName alias. This makes it easier to include the source
+    computer name in output and reports.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821595
+    Get-WSManInstance
+    Invoke-WSManAction
+    New-WSManInstance
+    Remove-WSManInstance
+    Invoke-WmiMethod
+    Remove-WmiObject
+    Set-WmiInstance
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Get-WmiObject -examples".
+    Para obtener más información, escriba: "get-help Get-WmiObject -detailed".
+    Para obtener información técnica, escriba: "get-help Get-WmiObject -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Get-WmiObject -online"
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-Help Get-WmiObject -Examples
+
+NOMBRE
+    Get-WmiObject
+
+SINOPSIS
+    Gets instances of WMI classes or information about the available classes.
+
+
+    Example 1: Get processes on the local computer
+
+    PS C:\>Get-WmiObject -Class Win32_Process
+
+    This command get the processes on the local computer.
+    Example 2: Gets services on a remote computer
+
+    PS C:\>Get-WmiObject -Class Win32_Service -ComputerName 127.0.0.1
+
+    This command gets the services on a remote computer. It uses the ComputerName parameter to specify the Internet Protocol (IP) address, 127.0.0.1. By default, the current
+    account must be a member of the Administrators group on the remote computer.
+    Example 3: Get WMI classes in the root or default namespace of the local computer
+
+    PS C:\>Get-WmiObject -Namespace "root/default" -List
+
+    This command gets the WMI classes in the root or default namespace of the local computer.
+    Example 4: Get a named service on multiple computers
+
+    PS C:\>Get-WmiObject -Query "select * from win32_service where name='WinRM'" -ComputerName Server01, Server02 | Format-List -Property PSComputerName, Name, ExitCode, Name,
+    ProcessID, StartMode, State, Status
+    PSComputerName : SERVER01
+    Name           : WinRM
+    ExitCode       : 0
+    Name           : WinRM
+    ProcessID      : 844
+    StartMode      : Auto
+    State          : Running
+    Status         : OK
+
+    PSComputerName : SERVER02
+    Name           : WinRM
+    ExitCode       : 0
+    Name           : WinRM
+    ProcessID      : 932
+    StartMode      : Auto
+    State          : Running
+    Status         : OK
+
+    This command gets the WinRM service on the computers that are specified by the value of the ComputerName parameter.
+
+    A pipeline operator (|) sends the output to the Format-List cmdlet, which adds the PSComputerName property to the default output. This makes it easy to see the computer on
+    which the service resides. PSComputerName is an alias of the __Server property of the objects that Get-WmiObject returns. This alias is introduced in Windows PowerShell 3.0.
+    Example 5: Stop a service on a remote computer
+
+    PS C:\>(Get-WmiObject -Class Win32_Service -Filter "name='WinRM'" -ComputerName Server01).StopService()
+
+    This command stops the WinRM service on the Server01 remote computer. The command uses a Get-WmiObject command to get the WinRM service on Server01. Then, it invokes the
+    StopService method of the Win32_Service WMI class on the object that the Get-WmiObject command returns.
+
+    This command is an alternative to using the Stop-Service cmdlet.
+    Example 6: Get the BIOS on the local computer
+
+    PS C:\>Get-WmiObject -Class Win32_Bios | Format-List -Property
+    Status                : OK
+    Name                  : Phoenix ROM BIOS PLUS Version 1.10 A05
+    Caption               : Phoenix ROM BIOS PLUS Version 1.10 A05
+    SMBIOSPresent         : True
+    __GENUS               : 2
+    __CLASS               : Win32_BIOS
+    __SUPERCLASS          : CIM_BIOSElement
+    __DYNASTY             : CIM_ManagedSystemElement
+    __RELPATH             : Win32_BIOS.Name="Phoenix ROM BIOS PLUS Version 1.10 â€¦
+    __PROPERTY_COUNT      : 27
+    __DERIVATION          : {CIM_BIOSElement, CIM_SoftwareElement, CIM_LogicalElement,â€¦
+    __SERVER              : Server01
+    __NAMESPACE           : root\cimv2
+    __PATH                : \\SERVER01\root\cimv2:Win32_BIOS.Name="Phoenix ROM BIOS
+     BiosCharacteristics   : {7, 9, 10, 11...}
+    BIOSVersion           : {DELL   - 15, Phoenix ROM BIOS PLUS Version 1.10 A05}
+    BuildNumber           :
+    CodeSet               :
+    CurrentLanguage       : en|US|iso8859-1
+    Description           : Phoenix ROM BIOS PLUS Version 1.10 A05
+    IdentificationCode    :
+    InstallableLanguages  : 1
+    InstallDate           :
+    LanguageEdition       :
+    ListOfLanguages       : {en|US|iso8859-1}
+    Manufacturer          : Dell Inc.
+    OtherTargetOS         :
+    PrimaryBIOS           : True
+    ReleaseDate           : 20101103000000.000000+000
+    SerialNumber          : 8VDM9P1
+    SMBIOSBIOSVersion     : A05
+    SMBIOSMajorVersion    : 2
+    SMBIOSMinorVersion    : 6SoftwareElementID     : Phoenix ROM BIOS PLUS Version 1.10 A05
+    SoftwareElementState  : 3
+    TargetOperatingSystem : 0
+    Version               : DELL   - 15
+    Scope                 : System.Management.ManagementScope
+    Path                  : \\SERVER01\root\cimv2:Win32_BIOS.Name="Phoenix ROM BIOS
+     Options               : System.Management.ObjectGetOptions
+    ClassPath             : \\JUNE-PC\root\cimv2:Win32_BIOS
+    Properties            : {BiosCharacteristics, BIOSVersion, BuildNumber, Caption...}
+    SystemProperties      : {__GENUS, __CLASS, __SUPERCLASS, __DYNASTY...}
+    Qualifiers            : {dynamic, Locale, provider, UUID}
+    Site                  :
+    Container             :
+
+    This command gets the BIOS on the local computer. The command uses a value of all (*) for the Property parameter of the Format-List cmdlet to display all properties of the
+    returned object in a list. By default, only a subset (defined in the Types.ps1xml configuration file) are displayed.
+    Example 7: Get the services on a remote computer
+
+    PS C:\>Get-WmiObject Win32_Service -Credential FABRIKAM\administrator -Computer Fabrikam
+
+    This command uses the Credential parameter of the Get-WmiObject cmdlet to get the services on a remote computer. The value of the Credential parameter is a user account name.
+    The user is prompted for a password.
+
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-WmiObject win32_service
+
+
+ExitCode  : 0
+Name      : AdobeARMservice
+ProcessId : 15168
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : AJRouter
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : ALG
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : AppIDSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Appinfo
+ProcessId : 7552
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : Apple Mobile Device Service
+ProcessId : 2984
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : AppReadiness
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : AppXSvc
+ProcessId : 16368
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : ASLDRService
+ProcessId : 3612
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : aspnet_state
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : AtherosSvc
+ProcessId : 2976
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : ATKGFNEXSrv
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : AudioEndpointBuilder
+ProcessId : 2500
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : Audiosrv
+ProcessId : 2896
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : autotimesvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : AxInstSV
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : BDESVC
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : BFE
+ProcessId : 3748
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : BITS
+ProcessId : 11068
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : BrokerInfrastructure
+ProcessId : 964
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : BTAGService
+ProcessId : 1232
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : BthAvctpSvc
+ProcessId : 1224
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : bthserv
+ProcessId : 1240
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : camsvc
+ProcessId : 2140
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : CDPSvc
+ProcessId : 7356
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : CertPropSvc
+ProcessId : 2912
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : ClickToRunSvc
+ProcessId : 3512
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : ClipSVC
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : COMSysApp
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : CoreMessagingRegistrar
+ProcessId : 1648
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : cphs
+ProcessId : 5100
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : cplspcon
+ProcessId : 2860
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : CryptSvc
+ProcessId : 3160
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : CxAudMsg
+ProcessId : 3652
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : dbupdate
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : dbupdatem
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : DcomLaunch
+ProcessId : 964
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : defragsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : DevActSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : DeviceAssociationService
+ProcessId : 2076
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : DeviceInstall
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : DevQueryBroker
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Dhcp
+ProcessId : 2644
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : diagnosticshub.standardcollector.service
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : diagsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : DiagTrack
+ProcessId : 540
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : DispBrokerDesktopSvc
+ProcessId : 2092
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : DisplayEnhancementService
+ProcessId : 1528
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : DmEnrollmentSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : dmwappushservice
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Dnscache
+ProcessId : 2808
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : DoSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : dot3svc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : DPS
+ProcessId : 3552
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : DsmSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : DsSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : DusmSvc
+ProcessId : 3252
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : Eaphost
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : EFS
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : embeddedmode
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : EntAppSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : esifsvc
+ProcessId : 3924
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : EventLog
+ProcessId : 2292
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : EventSystem
+ProcessId : 1584
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : Fax
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : FBAgent
+ProcessId : 2028
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : fdPHost
+ProcessId : 7564
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : FDResPub
+ProcessId : 7740
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : fhsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : FontCache
+ProcessId : 2516
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : FontCache3.0.0.0
+ProcessId : 4272
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : FrameServer
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : GamesAppIntegrationService
+ProcessId : 10160
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : GamesAppService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : GoogleChromeElevationService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : gpsvc
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : GraphicsPerfSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : gupdate
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : gupdatem
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Hamachi2Svc
+ProcessId : 4140
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : hidserv
+ProcessId : 1556
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : HvHost
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : icssvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : igfxCUIService2.0.0.0
+ProcessId : 1924
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : IKEEXT
+ProcessId : 3976
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : InstallService
+ProcessId : 9464
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : Intel(R) Capability Licensing Service TCP IP Interface
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Intel(R) Security Assist
+ProcessId : 14372
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : iphlpsvc
+ProcessId : 4188
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : iPod Service
+ProcessId : 13028
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : IpxlatCfgSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : isaHelperSvc
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : jhi_service
+ProcessId : 10924
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : JTAGServer
+ProcessId : 4256
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : KeyIso
+ProcessId : 788
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : Kingsoft_WPS_UpdateService
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : KtmRm
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : LanmanServer
+ProcessId : 4308
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : LanmanWorkstation
+ProcessId : 3788
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : lfsvc
+ProcessId : 2316
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : LicenseManager
+ProcessId : 9364
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : lltdsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : lmhosts
+ProcessId : 6660
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : LMIGuardianSvc
+ProcessId : 4292
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : LMS
+ProcessId : 11784
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : LSM
+ProcessId : 876
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : LxpSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : MapsBroker
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : mpssvc
+ProcessId : 3748
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : MSDTC
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : MSiSCSI
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : msiserver
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : NaturalAuthentication
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : NcaSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : NcbService
+ProcessId : 1372
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : NcdAutoSetup
+ProcessId : 13268
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : Netlogon
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : Netman
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : netprofm
+ProcessId : 2928
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : NetSetupSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : NetTcpPortSharing
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : NgcCtnrSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : NgcSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : NlaSvc
+ProcessId : 2768
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : NortonSecurity
+ProcessId : 4320
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : nsi
+ProcessId : 2564
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : nsWscSvc
+ProcessId : 4368
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : ose64
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : p2pimsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : p2psvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : PcaSvc
+ProcessId : 7940
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : perceptionsimulation
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : PerfHost
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : PhoneSvc
+ProcessId : 2488
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : pla
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : PlugPlay
+ProcessId : 920
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : PNRPAutoReg
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : PNRPsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : PolicyAgent
+ProcessId : 3984
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : postgresql-x64-12
+ProcessId : 4460
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : Power
+ProcessId : 964
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : PrintNotify
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : ProfSvc
+ProcessId : 1452
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : PushToInstall
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : QWAVE
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : RasAuto
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : RasMan
+ProcessId : 5336
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : RemoteAccess
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : RemoteRegistry
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : RetailDemo
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : RmSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : RpcEptMapper
+ProcessId : 480
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : RpcLocator
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : RpcSs
+ProcessId : 480
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : SamSs
+ProcessId : 788
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : SAService
+ProcessId : 4444
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : SCardSvr
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : ScDeviceEnum
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Schedule
+ProcessId : 1512
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : SCPolicySvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : SDRSVC
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : seclogon
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : SecurityHealthService
+ProcessId : 12736
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : SEMgrSvc
+ProcessId : 1088
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : SENS
+ProcessId : 1856
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : SensorDataService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : SensorService
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : SensrSvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : SessionEnv
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : SgrmBroker
+ProcessId : 12256
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : SharedAccess
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : SharedRealitySvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : ShellHWDetection
+ProcessId : 3620
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : shpamsvc
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : smphost
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : SmsRouter
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : SNMPTRAP
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 1077
+Name      : spectrum
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : Spooler
+ProcessId : 3704
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : sppsvc
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : SQLWriter
+ProcessId : 4476
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : SSDPSRV
+ProcessId : 1620
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : ssh-agent
+ProcessId : 0
+StartMode : Disabled
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : SstpSvc
+ProcessId : 4408
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : StateRepository
+ProcessId : 2172
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : stisvc
+ProcessId : 4416
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : StorSvc
+ProcessId : 9052
+StartMode : Manual
+State     : Running
+Status    : OK
+
+ExitCode  : 1077
+Name      : svsvc
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : swprv
+ProcessId : 0
+StartMode : Manual
+State     : Stopped
+Status    : OK
+
+ExitCode  : 0
+Name      : SysMain
+ProcessId : 2384
+StartMode : Auto
+State     : Running
+Status    : OK
+
+ExitCode  : 0
+Name      : SystemEventsBroker
+ProcessId : 964
+StartMode : Auto
+>> ErrorTerminación(): "Se ha detenido la canalización."
+>> ErrorTerminación(): "Se ha detenido la canalización."
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-WmiObject win32_service | Select-Object status, startmode, systemname
+
+status startmode systemname
+------ --------- ----------
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Disabled  PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Disabled  PC
+OK     Disabled  PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Disabled  PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Disabled  PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Disabled  PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Manual    PC
+OK     Auto      PC
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> help Get-CimClass
+
+NOMBRE
+    Get-CimClass
+
+SINOPSIS
+    Gets a list of CIM classes in a specific namespace.
+
+
+SINTAXIS
+    Get-CimClass [[-ClassName] <String>] [[-Namespace] <String>] [-ComputerName <String[]>] [-MethodName <String>] [-OperationTimeoutSec <UInt32>] [-PropertyName <String>]
+    [-QualifierName <String>] [<CommonParameters>]
+
+    Get-CimClass [[-ClassName] <String>] [[-Namespace] <String>] [-MethodName <String>] [-OperationTimeoutSec <UInt32>] [-PropertyName <String>] [-QualifierName <String>]
+    -CimSession <CimSession[]> [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Get-CimClass cmdlet gets a list of Common Information Model (CIM) classes in a specific namespace.
+
+    If there is no class name supplied, then the cmdlet returns all the classes in the namespace.
+
+    Unlike a CIM instance, CIM classes do not contain the CIM session or computer name from which they are retrieved.
+
+
+VÍNCULOS RELACIONADOS
+    Online Version:
+    Get-CimSession
+    New-CimSession
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Get-CimClass -examples".
+    Para obtener más información, escriba: "get-help Get-CimClass -detailed".
+    Para obtener información técnica, escriba: "get-help Get-CimClass -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Get-CimClass -online"
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-Help Get-CimClass -Detailed
+
+NOMBRE
+    Get-CimClass
+
+SINOPSIS
+    Gets a list of CIM classes in a specific namespace.
+
+
+SINTAXIS
+    Get-CimClass [[-ClassName] <String>] [[-Namespace] <String>] [-ComputerName <String[]>] [-MethodName <String>] [-OperationTimeoutSec <UInt32>] [-PropertyName <String>]
+    [-QualifierName <String>] [<CommonParameters>]
+
+    Get-CimClass [[-ClassName] <String>] [[-Namespace] <String>] [-MethodName <String>] [-OperationTimeoutSec <UInt32>] [-PropertyName <String>] [-QualifierName <String>]
+    -CimSession <CimSession[]> [<CommonParameters>]
+
+
+DESCRIPCIÓN
+    The Get-CimClass cmdlet gets a list of Common Information Model (CIM) classes in a specific namespace.
+
+    If there is no class name supplied, then the cmdlet returns all the classes in the namespace.
+
+    Unlike a CIM instance, CIM classes do not contain the CIM session or computer name from which they are retrieved.
+
+
+PARÁMETROS
+    -CimSession <CimSession[]>
+        Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a New-CimSession or Get-CimSession cmdlet. The
+        default is the current session on the local computer.
+
+    -ClassName [<String>]
+        Specifies the name of the CIM class for which to perform the operation.
+        NOTE: You can use tab completion to browse the list of classes, because Windows PowerShell gets a list of classes from the local WMI server to provide a list of class names.
+
+    -ComputerName [<String[]>]
+        Specifies the computer on which you want to run the CIM operation. You can specify a fully qualified domain name (FQDN) a NetBIOS name, or an IP address.
+
+        If you specify this parameter, the cmdlet creates a temporary session to the specified computer using the WsMan protocol.
+
+        If you do not specify this parameter, the cmdlet performs the operation on the local computer using Component Object Model (COM).
+
+        If multiple operations are being performed on the same computer, using a CIM session gives better performance.
+
+    -MethodName [<String>]
+        Finds the classes that have a method matching this name.
+
+        You can use wildcard characters with this parameter.
+
+    -Namespace [<String>]
+        Specifies the namespace for CIM operation.
+
+        The default namespace is root/cimv2.
+        NOTE: You can use tab completion to browse the list of namespaces, because Windows PowerShell gets a list of namespaces from the local WMI server to provide the list of
+        namespaces.
+
+    -OperationTimeoutSec [<UInt32>]
+        Specifies the amount of time that the cmdlet waits for a response from the computer.
+
+        By default, the value of this parameter is 0, which means that the cmdlet uses the default timeout value for the server.
+
+        If the OperationTimeoutSec parameter is set to a value less than the robust connection retry timeout of 3 minutes, network failures that last more than the value of the
+        OperationTimeoutSec parameter are not recoverable, because the operation on the server times out before the client can reconnect.
+
+    -PropertyName [<String>]
+        Finds the classes which have a property matching this name.
+
+        You can use wildcard characters with this parameter.
+
+    -QualifierName [<String>]
+        Filters the classes by class level qualifier name. You can use wildcard characters with this parameter.
+
+    <CommonParameters>
+        Este cmdlet admite los parámetros comunes: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable y OutVariable. Para obtener más información, consulta
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+    Example 1: Get all the class definitions
+
+    PS C:\>Get-CimClass
+
+    This command gets all the class definitions under the namespace root/cimv2.
+
+
+    Example 2: Get the classes with a specific name
+
+    PS C:\>Get-CimClass -ClassName *disk*
+
+    This command gets the classes that contain the word disk in their names.
+
+
+    Example 3: Get the classes with a specific method name
+
+    PS C:\>Get-CimClass –ClassName Win32* -MethodName Term*
+
+    This command gets the classes that start with the name Win32 and have a method name that starts with Term.
+
+
+    Example 4: Get the classes with a specific property name
+
+    PS C:\>Get-CimClass –ClassName Win32* -PropertyName Handle
+
+    This command gets the classes that start with the name Win32 and have a property named Handle.
+
+
+    Example 5: Get the classes with a specific qualifier name
+
+    PS C:\>Get-CimClass –ClassName Win32*Disk* -QualifierName Association
+
+    This command gets the classes that start with the name Win32, contain the word Disk in their names and have the specified qualifier Association.
+
+
+    Example 6: Get the class definitions from a specific namespace
+
+    PS C:\>Get-CimClass -Namespace root/standardCimv2 -ClassName *Net*
+
+    This command gets the class definitions that contain the word Net in their names from the specified namespace root/standardCimv2.
+
+
+    Example 7: Get the class definitions from a remote server
+
+    PS C:\>Get-CimClass -ClassName *disk* -ComputerName Server01, Server02
+
+    This command gets the class definitions that contain the word disk in their names from the specified remote servers Server01 and Server02.
+
+
+    Example 8: Get the classes by using a CIM session
+
+    PS C:\>$s = New-CimSession -ComputerName Server01, Server02
+    PS C:\> Get-CimClass -ClassName *disk* -CimSession $s
+
+    This set of commands creates a session with multiple computers and stores it into a variable $s using the New-CimSession cmdlet, and then gets the classes using the
+    Get-CimClass cmdlet.
+
+
+NOTAS
+    Para ver los ejemplos, escriba: "get-help Get-CimClass -examples".
+    Para obtener más información, escriba: "get-help Get-CimClass -detailed".
+    Para obtener información técnica, escriba: "get-help Get-CimClass -full".
+    Para obtener ayuda disponible en línea, escriba: "get-help Get-CimClass -online"
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-Help Get-CimClass -examples
+
+NOMBRE
+    Get-CimClass
+
+SINOPSIS
+    Gets a list of CIM classes in a specific namespace.
+
+
+    Example 1: Get all the class definitions
+
+    PS C:\>Get-CimClass
+
+    This command gets all the class definitions under the namespace root/cimv2.
+
+
+    Example 2: Get the classes with a specific name
+
+    PS C:\>Get-CimClass -ClassName *disk*
+
+    This command gets the classes that contain the word disk in their names.
+
+
+    Example 3: Get the classes with a specific method name
+
+    PS C:\>Get-CimClass –ClassName Win32* -MethodName Term*
+
+    This command gets the classes that start with the name Win32 and have a method name that starts with Term.
+
+
+    Example 4: Get the classes with a specific property name
+
+    PS C:\>Get-CimClass –ClassName Win32* -PropertyName Handle
+
+    This command gets the classes that start with the name Win32 and have a property named Handle.
+
+
+    Example 5: Get the classes with a specific qualifier name
+
+    PS C:\>Get-CimClass –ClassName Win32*Disk* -QualifierName Association
+
+    This command gets the classes that start with the name Win32, contain the word Disk in their names and have the specified qualifier Association.
+
+
+    Example 6: Get the class definitions from a specific namespace
+
+    PS C:\>Get-CimClass -Namespace root/standardCimv2 -ClassName *Net*
+
+    This command gets the class definitions that contain the word Net in their names from the specified namespace root/standardCimv2.
+
+
+    Example 7: Get the class definitions from a remote server
+
+    PS C:\>Get-CimClass -ClassName *disk* -ComputerName Server01, Server02
+
+    This command gets the class definitions that contain the word disk in their names from the specified remote servers Server01 and Server02.
+
+
+    Example 8: Get the classes by using a CIM session
+
+    PS C:\>$s = New-CimSession -ComputerName Server01, Server02
+    PS C:\> Get-CimClass -ClassName *disk* -CimSession $s
+
+    This set of commands creates a session with multiple computers and stores it into a variable $s using the New-CimSession cmdlet, and then gets the classes using the
+    Get-CimClass cmdlet.
+
+
+
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> help Get-CimClass -Namespace 
+>> ErrorTerminación(help): "No se encuentra ningún parámetro que coincida con el nombre del parámetro 'Namespace'."
+help : No se encuentra ningún parámetro que coincida con el nombre del parámetro 'Namespace'.
+En línea: 1 Carácter: 19
++ help Get-CimClass -Namespace
++                   ~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [help], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,help
+help : No se encuentra ningún parámetro que coincida con el nombre del parámetro 'Namespace'.
+En línea: 1 Carácter: 19
++ help Get-CimClass -Namespace
++                   ~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [help], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,help
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> help Get-CimClass -Namespace root/SecurityCenter2 
+>> ErrorTerminación(help): "No se encuentra ningún parámetro que coincida con el nombre del parámetro 'Namespace'."
+help : No se encuentra ningún parámetro que coincida con el nombre del parámetro 'Namespace'.
+En línea: 1 Carácter: 19
++ help Get-CimClass -Namespace root/SecurityCenter2
++                   ~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [help], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,help
+help : No se encuentra ningún parámetro que coincida con el nombre del parámetro 'Namespace'.
+En línea: 1 Carácter: 19
++ help Get-CimClass -Namespace root/SecurityCenter2
++                   ~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [help], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,help
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-CimClass -Namespace root/SecurityCenter2 
+
+
+   NameSpace: ROOT/SecurityCenter2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+CIM_Indication                      {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_ClassIndication                 {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_ClassDeletion                   {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_ClassCreation                   {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_ClassModification               {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_InstIndication                  {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_InstCreation                    {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_InstModification                {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+CIM_InstDeletion                    {}                   {CorrelatedIndications, IndicationFilterName, IndicationIdentifier, IndicationTime...}
+__NotifyStatus                      {}                   {StatusCode}
+__ExtendedStatus                    {}                   {StatusCode, Description, Operation, ParameterInfo...}
+CIM_Error                           {}                   {CIMStatusCode, CIMStatusCodeDescription, ErrorSource, ErrorSourceFormat...}
+MSFT_WmiError                       {}                   {CIMStatusCode, CIMStatusCodeDescription, ErrorSource, ErrorSourceFormat...}
+MSFT_ExtendedStatus                 {}                   {CIMStatusCode, CIMStatusCodeDescription, ErrorSource, ErrorSourceFormat...}
+__SecurityRelatedClass              {}                   {}
+__Trustee                           {}                   {Domain, Name, SID, SidLength...}
+__NTLMUser9X                        {}                   {Authority, Flags, Mask, Name...}
+__ACE                               {}                   {AccessMask, AceFlags, AceType, GuidInheritedObjectType...}
+__SecurityDescriptor                {}                   {ControlFlags, DACL, Group, Owner...}
+__PARAMETERS                        {}                   {}
+__SystemClass                       {}                   {}
+__ProviderRegistration              {}                   {provider}
+__EventProviderRegistration         {}                   {provider, EventQueryList}
+__ObjectProviderRegistration        {}                   {provider, InteractionType, QuerySupportLevels, SupportsBatching...}
+__ClassProviderRegistration         {}                   {provider, InteractionType, QuerySupportLevels, SupportsBatching...}
+__InstanceProviderRegistration      {}                   {provider, InteractionType, QuerySupportLevels, SupportsBatching...}
+__MethodProviderRegistration        {}                   {provider}
+__PropertyProviderRegistration      {}                   {provider, SupportsGet, SupportsPut}
+__EventConsumerProviderRegistration {}                   {provider, ConsumerClassNames}
+__thisNAMESPACE                     {}                   {SECURITY_DESCRIPTOR}
+__NAMESPACE                         {}                   {Name}
+__IndicationRelated                 {}                   {}
+__FilterToConsumerBinding           {}                   {Consumer, CreatorSID, DeliverSynchronously, DeliveryQoS...}
+__EventConsumer                     {}                   {CreatorSID, MachineName, MaximumQueueSize}
+__AggregateEvent                    {}                   {NumberOfEvents, Representative}
+__TimerNextFiring                   {}                   {NextEvent64BitTime, TimerId}
+__EventFilter                       {}                   {CreatorSID, EventAccess, EventNamespace, Name...}
+__Event                             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED}
+__NamespaceOperationEvent           {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetNamespace}
+__NamespaceModificationEvent        {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetNamespace, PreviousNamespace}
+__NamespaceDeletionEvent            {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetNamespace}
+__NamespaceCreationEvent            {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetNamespace}
+__ClassOperationEvent               {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetClass}
+__ClassDeletionEvent                {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetClass}
+__ClassModificationEvent            {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetClass, PreviousClass}
+__ClassCreationEvent                {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetClass}
+__InstanceOperationEvent            {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetInstance}
+__InstanceCreationEvent             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetInstance}
+__MethodInvocationEvent             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetInstance, Method...}
+__InstanceModificationEvent         {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetInstance, PreviousInstance}
+__InstanceDeletionEvent             {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetInstance}
+__TimerEvent                        {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, NumFirings, TimerId}
+__ExtrinsicEvent                    {}                   {SECURITY_DESCRIPTOR, TIME_CREATED}
+__SystemEvent                       {}                   {SECURITY_DESCRIPTOR, TIME_CREATED}
+__EventDroppedEvent                 {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Event, IntendedConsumer}
+__EventQueueOverflowEvent           {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Event, IntendedConsumer...}
+__QOSFailureEvent                   {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Event, IntendedConsumer...}
+__ConsumerFailureEvent              {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, Event, IntendedConsumer...}
+__EventGenerator                    {}                   {}
+__TimerInstruction                  {}                   {SkipIfPassed, TimerId}
+__AbsoluteTimerInstruction          {}                   {SkipIfPassed, TimerId, EventDateTime}
+__IntervalTimerInstruction          {}                   {SkipIfPassed, TimerId, IntervalBetweenEvents}
+__Provider                          {}                   {Name}
+__Win32Provider                     {}                   {Name, ClientLoadableCLSID, CLSID, Concurrency...}
+__SystemSecurity                    {GetSD, GetSecuri... {}
+AntiSpywareProduct                  {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToSignedReportingExe...}
+AntiVirusProduct                    {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToSignedReportingExe...}
+FirewallProduct                     {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToSignedReportingExe...}
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-CimClass -Namespace root/SecurityCenter2 | where CimClassName -Like '*product*'
+
+
+   NameSpace: ROOT/SecurityCenter2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+AntiVirusProduct                    {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToSignedReportingExe...}
+FirewallProduct                     {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToSignedReportingExe...}
+AntiSpywareProduct                  {}                   {displayName, instanceGuid, pathToSignedProductExe, pathToSignedReportingExe...}
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiSpywareProduct 
+
+
+displayName              : Windows Defender
+instanceGuid             : {D68DDC3A-831F-4fae-9E44-DA132C1ACF46}
+pathToSignedProductExe   : windowsdefender://
+pathToSignedReportingExe : %ProgramFiles%\Windows Defender\MsMpeng.exe
+productState             : 393472
+timestamp                : Mon, 02 Sep 2019 00:01:16 GMT
+PSComputerName           :
+
+displayName              : Avast Antivirus
+instanceGuid             : {35C973AA-9ABB-D3CA-B100-B0DC0E5F2402}
+pathToSignedProductExe   : C:\Program Files\AVAST Software\Avast\wsc_proxy.exe
+pathToSignedReportingExe : C:\Program Files\AVAST Software\Avast\wsc_proxy.exe
+productState             : 266240
+timestamp                : Mon, 16 Sep 2019 20:20:02 GMT
+PSComputerName           :
+
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiSpywareProduct | where cimclassname -Like 'product'
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiVirusProduct
+
+
+displayName              : Norton Security
+instanceGuid             : {1122B19A-E671-38EC-8EAC-87048FD4528D}
+pathToSignedProductExe   : C:\Program Files\Norton Security\Engine\22.20.1.69\WSCStub.exe
+pathToSignedReportingExe : C:\Program Files\Norton Security\Engine\22.20.1.69\nsWscSvc.exe
+productState             : 331776
+timestamp                : Wed, 18 Mar 2020 13:04:49 GMT
+PSComputerName           :
+
+displayName              : Norton Security
+instanceGuid             : {A2708B76-6835-6565-CB96-694212954A75}
+pathToSignedProductExe   : C:\Program Files\Norton Security\Engine\22.19.9.63\WSCStub.exe
+pathToSignedReportingExe : C:\Program Files\Norton Security\Engine\22.19.9.63\nsWscSvc.exe
+productState             : 331776
+timestamp                : Fri, 14 Feb 2020 14:09:07 GMT
+PSComputerName           :
+
+displayName              : Windows Defender
+instanceGuid             : {D68DDC3A-831F-4fae-9E44-DA132C1ACF46}
+pathToSignedProductExe   : windowsdefender://
+pathToSignedReportingExe : %ProgramFiles%\Windows Defender\MsMpeng.exe
+productState             : 393472
+timestamp                : Thu, 31 Oct 2019 23:28:58 GMT
+PSComputerName           :
+
+
+
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiVirusProduct | where cimclassname -Like 'spyware'
+PS C:\Users\Alejandro Narvaez\Documents\WindowsPowerShell> Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20200319104355
+**********************
