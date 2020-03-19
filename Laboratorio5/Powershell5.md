@@ -4,7 +4,7 @@
 
 Respuesta:
 
-``Get-CimInstance -Class Win32_NetworkAdapterConfiguration | select IP, ServiceName``
+``Get-CimInstance -Class Win32_NetworkAdapterConfiguration | Select-Object IP``
 
 La clase  Win32_NetworkAdapterConfiguration no posee algún método que libere un préstamo en dirección DHCP.
 
@@ -31,6 +31,8 @@ Respuesta:
 
 Respuesta:
 
-``Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiSpywareProduct | where cimclassname -Like 'product'``
+``Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiSpywareProduct``
+``| where cimclassname -Like 'product'``
 
-``Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiVirusProduct | where cimclassname -Like 'spyware' ``
+``Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiVirusProduct``
+``| where cimclassname -Like 'spyware' ``
